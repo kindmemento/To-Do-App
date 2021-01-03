@@ -1,0 +1,1 @@
+(()=>{let e=document.getElementById("pVal"),n=document.getElementById("pValText");e.onchange=()=>{"1"===e.value?n.innerText="Low":"2"===e.value?n.innerText="Medium":"3"===e.value&&(n.innerText="High")}})();
