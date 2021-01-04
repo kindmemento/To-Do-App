@@ -10,22 +10,25 @@
 <body>
   <div class="projects">
     <div class="form">
-      <div id="title">
+      <div>
         <span>Title</span>
-        <input type="text" placeholder="Enter a title for the task.">
+        <input type="text" id="title" placeholder="Enter a title for the task.">
       </div>
-      <div id="description">
+      <div>
         <span>Description</span>
-        <input type="text" placeholder="Describe the task.">
+        <textarea type="text" id="description" placeholder="Describe the task."></textarea>
       </div>
-      <div id="due-date">
-        <span>Due Date</span>
-        <input type="date" placeholder="Enter a due date for the task.">
+      <div>
+        <span id="due">Due Date: </span>
+        <input type="date" id="due-date">
       </div>
-      <div id="priority">
+      <div>
         <span>What's this task's priority?</span>
-        <input type="range" id="pVal" min="1" max="3" value="2">
+        <input type="range" id="priority" min="1" max="3" value="2">
         <div id="pValText">Medium</div>
+      </div>
+      <div>
+        <button id="submit">Submit</button>
       </div>
     </div>
   </div>
