@@ -1,10 +1,6 @@
-import { Task } from './task'
-
 const submit = document.getElementById('submit')
 
 submit.onclick = () => {
-  const task = new Task()
-
   let date = document.getElementById('due-date').value
   let year = date.charAt(0) + date.charAt(1) + date.charAt(2) + date.charAt(3)
   let month = date.charAt(5) + date.charAt(6)
@@ -38,5 +34,15 @@ submit.onclick = () => {
   let day = date.charAt(8) + date.charAt(9)
   let dueDate = month + ' ' + day + ', ' + year
   console.log(dueDate)
+  
+  function Task() {
+    this.title = document.getElementById('title').value,
+    this.description = document.getElementById('description').value,
+    this.dueDate = dueDate,
+    this.priority = pValText.innerText
+  }
+
+  let task = new Task()
+
   console.log(task)
 }
