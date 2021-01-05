@@ -8,29 +8,47 @@
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-  <div class="projects">
-    <div class="form">
-      <div>
-        <span>Title</span>
-        <input type="text" id="title" placeholder="Enter a title for the task.">
+
+  <header>To-Do App</header>
+
+  <div class="wrapper">
+    <div class="projects">
+
+      <div class="default-project">
+        <span>Default Project Title</span>
       </div>
-      <div>
-        <span>Description</span>
-        <textarea type="text" id="description" placeholder="Describe the task."></textarea>
-      </div>
-      <div>
-        <span id="due">Due Date: </span>
-        <input type="date" id="due-date">
-      </div>
-      <div>
-        <span>What's this task's priority?</span>
-        <input type="range" id="priority" min="1" max="3" value="2">
-        <div id="pValText">Medium</div>
-      </div>
-      <div>
-        <button id="submit">Submit</button>
-      </div>
+
+    </div>
+
+    <div class="tasks">
+      <span>Default Task</span>
     </div>
   </div>
+
+  <!-- #hidden task generator form start-->
+  <form>
+    <div>
+      <span>Title</span>
+      <input type="text" id="title" placeholder="Enter a title for the task." required>
+    </div>
+    <div>
+      <span>Description</span>
+      <textarea type="text" id="description" placeholder="Describe the task." required></textarea>
+    </div>
+    <div>
+      <span>Due Date: </span>
+      <input type="date" id="due-date" required>
+    </div>
+    <div>
+      <span>What's this task's priority?</span>
+      <input type="range" id="priority" min="1" max="3" value="2">
+      <div id="pValText">Medium</div>
+    </div>
+    <div>
+      <button id="submit">Submit</button>
+    </div>
+  </form>
+  <!-- #hidden task generator form end-->
+
 </body>
 </html>
