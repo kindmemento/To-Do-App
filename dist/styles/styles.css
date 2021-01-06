@@ -12,12 +12,49 @@ header {
 
 .wrapper {
   display: inline-flex;
-  margin: 20px;
+  margin: auto;
 }
 
 .wrapper > * {
+  margin: auto;
   margin-right: 10vw;
-  margin-top: 2.5vh;
+  padding-bottom: 100px;
+}
+
+.sidebar {
+  color: white;
+  background-color: blue;
+  height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+.project {
+  font-size: 1.5em;
+  padding: 30px;
+  padding-bottom: 30px;
+  transition: 0.15s;
+}
+
+.project:hover {
+  cursor: pointer;
+  background-color: yellow;
+  color: black;
+}
+
+.add-project {
+  text-align: center;
+  font-size: 2em;
+  border: 2px solid white;
+  border-radius: 30px;
+  margin: 30px;
+  padding: 10px;
+  transition: 0.15s;
+}
+
+.add-project:hover {
+  cursor: pointer;
+  background-color: rgb(0, 185, 0);
+  transform: scale(1.1);
 }
 
 /* #form styling start */
