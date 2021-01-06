@@ -21,44 +21,87 @@ header {
   padding-bottom: 100px;
 }
 
-.sidebar {
-  color: white;
-  background-color: blue;
-  height: calc(100vh - 160px);
-  overflow: auto;
-}
+/* #sidebar styling start */
+  .sidebar {
+    color: white;
+    background-color: blue;
+    height: calc(100vh - 160px);
+    overflow: auto;
+  }
 
-.project {
-  font-size: 1.5em;
-  padding: 30px;
-  padding-bottom: 30px;
-  transition: 0.15s;
-}
+  .project-item {
+    display: flex;
+    font-size: 1.5em;
+    padding: 20px;
+    transition: 0.15s;
+    border: 1px solid black;
+  }
 
-.project:hover {
-  cursor: pointer;
-  background-color: yellow;
-  color: black;
-}
+  .project-item:hover {
+    cursor: pointer;
+    background-color: yellow;
+    color: black;
+  }
 
-.add-project {
-  text-align: center;
-  font-size: 2em;
-  border: 2px solid white;
-  border-radius: 30px;
-  margin: 30px;
-  padding: 10px;
-  transition: 0.15s;
-}
+  .project-item > :nth-child(2) {
+    float: right;
+    font-weight: 900;
+    font-size: 2em;
+    margin: auto;
+  }
 
-.add-project:hover {
-  cursor: pointer;
-  background-color: rgb(0, 185, 0);
-  transform: scale(1.1);
-}
+  .project-item > :nth-child(2):hover {
+    color: red;
+  }
 
-/* #form styling start */
-  form {
+  .add-project {
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin: 30px;
+    padding: 10px;
+    transition: 0.15s;
+  }
+
+  .add-project:hover {
+    cursor: pointer;
+    background-color: rgb(0, 185, 0);
+    transform: scale(1.1);
+  }
+/* #sidebar styling end */
+
+/* #project generator styling start */
+  .project-form {
+    text-align: center;
+    display: none;
+  }
+
+  .project-form > * {
+    display: grid;
+    margin: 10px;
+  }
+
+  #title {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+  }
+
+  #project-submit {
+    font-size: 1.5em;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+
+  #project-submit:hover {
+    cursor: pointer;
+    background-color: green;
+  }
+
+/* #project generator styling end*/
+
+/* #task generator styling start */
+  .task-form {
     display: none;
     justify-content: center;
     align-items: center;
@@ -69,7 +112,7 @@ header {
     font-size: 1.5em;
   }
 
-  form > * {
+  .task-form > * {
     display: grid;
     margin: 10px;
   }
@@ -90,14 +133,14 @@ header {
     height: 10vh;
   }
 
-  #submit {
+  #task-submit {
     font-size: 1.5em;
     border-radius: 30px;
     transition: 0.3s;
   }
 
-  #submit:hover {
+  #task-submit:hover {
     cursor: pointer;
     background-color: green;
   }
-/* #form styling end */
+/* #task generator styling end */
