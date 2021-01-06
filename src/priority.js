@@ -1,3 +1,5 @@
+//change priority level on change based on selection
+
 export function setPriority() {
 
   let priority = document.getElementById('priority')

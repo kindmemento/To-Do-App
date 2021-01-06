@@ -1,6 +1,4 @@
-const submit = document.getElementById('submit')
-
-submit.onclick = () => {
+document.getElementById('task-submit').onclick = () => {
   let date = document.getElementById('due-date').value
   let year = date.charAt(0) + date.charAt(1) + date.charAt(2) + date.charAt(3)
   let month = date.charAt(5) + date.charAt(6)
@@ -36,7 +34,7 @@ submit.onclick = () => {
   console.log(dueDate)
   
   function Task() {
-    this.title = document.getElementById('title').value,
+    this.title = document.getElementById('task-title').value,
     this.description = document.getElementById('description').value,
     this.dueDate = dueDate,
     this.priority = pValText.innerText
