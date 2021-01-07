@@ -144,3 +144,7 @@ header {
     background-color: green;
   }
 /* #task generator styling end */
+
+.task-item {
+  display: grid;
+}
