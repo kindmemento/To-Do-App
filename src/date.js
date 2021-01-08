@@ -32,15 +32,4 @@ document.getElementById('task-submit').onclick = () => {
   let day = date.charAt(8) + date.charAt(9)
   let dueDate = month + ' ' + day + ', ' + year
   console.log(dueDate)
-  
-  function Task() {
-    this.title = document.getElementById('task-title').value,
-    this.description = document.getElementById('description').value,
-    this.dueDate = dueDate,
-    this.priority = pValText.innerText
-  }
-
-  let task = new Task()
-
-  console.log(task)
 }
