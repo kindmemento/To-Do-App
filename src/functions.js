@@ -26,9 +26,8 @@ const createProject = () => {
       removeProject.innerText = 'X'
       newProject.append(removeProject)
       
-      
       const newProjectTasks = document.createElement('div')
-      newProjectTasks.classList.add('tasks-item')
+      newProjectTasks.classList.add('tasks-container')
       tasks.append(newProjectTasks)
       
       newProject.onclick = () => {
@@ -48,7 +47,7 @@ const createProject = () => {
     }
   }
   
-  //create a tasks-item div for the newly created project-item
+  //create a tasks-container div for the newly created project-item
   function hideUnselectedProjects() {
     const tasks = document.querySelector('.tasks-wrapper')
     const tasksChildren = tasks.children
@@ -59,7 +58,7 @@ const createProject = () => {
       }
     }
 
-return { addProject, hideUnselectedProjects }
+  return { addProject, hideUnselectedProjects }
 }
 
 export const project = createProject()
