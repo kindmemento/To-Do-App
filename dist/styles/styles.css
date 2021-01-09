@@ -33,7 +33,6 @@ header {
     display: flex;
     font-size: 1.5em;
     padding: 20px;
-    transition: 0.15s;
     border: 1px solid black;
   }
 
@@ -44,7 +43,6 @@ header {
   }
 
   .project-item > :nth-child(2) {
-    float: right;
     font-weight: 900;
     font-size: 2em;
     margin: auto;
@@ -145,6 +143,6 @@ header {
   }
 /* #task generator styling end */
 
-.task-item {
+.task-container {
   display: grid;
 }
