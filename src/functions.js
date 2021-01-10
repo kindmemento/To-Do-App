@@ -28,18 +28,22 @@ const createProject = () => {
       newProject.append(removeProject)
 
       const newProjectTaskContainer = document.createElement('div')
-      newProjectTaskContainer.classList.add('tasks-container')
+      newProjectTaskContainer.classList.add('task-container')
+      newProjectTaskContainer.id = 'task-container'
       newProjectTaskContainer.style.display = 'none'
       tasks.append(newProjectTaskContainer)
-
+      
       newProject.onclick = () => {
         hideUnselectedProjects()
         newProjectTaskContainer.style.display = 'grid'
+        const taskForm = document.querySelector('.task-form')
+        taskForm.style.display = 'grid'
       }
       
       removeProject.onclick = () => {
         newProject.remove()
         newProjectTitle.remove()
+        newProjectTaskContainer.remove()
       }
 
       projectForm.style.display = 'none' //Close the form after creating a new project.
