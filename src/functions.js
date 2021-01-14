@@ -1,3 +1,5 @@
+import { dueDate } from './date'
+
 //Display add-project form.
 const projectForm = document.querySelector('.project-form')
 
@@ -21,6 +23,7 @@ const createProject = () => {
       
       const newProjectTitle = document.createElement('span')
       newProjectTitle.innerText = title
+      newProjectTitle.style.wordBreak = 'break-word'
       newProject.append(newProjectTitle)
       
       const removeProject = document.createElement('span')
@@ -29,7 +32,6 @@ const createProject = () => {
 
       const newProjectTaskContainer = document.createElement('div')
       newProjectTaskContainer.classList.add('task-container')
-      newProjectTaskContainer.id = 'task-container'
       newProjectTaskContainer.style.display = 'none'
       tasks.append(newProjectTaskContainer)
       
@@ -37,13 +39,63 @@ const createProject = () => {
         hideUnselectedProjects()
         newProjectTaskContainer.style.display = 'grid'
         const taskForm = document.querySelector('.task-form')
-        taskForm.style.display = 'grid'
+        taskForm.style.display = 'flex'
       }
       
       removeProject.onclick = () => {
         newProject.remove()
         newProjectTitle.remove()
         newProjectTaskContainer.remove()
+      }
+
+      function Task () {
+        this.title = document.querySelector('#task-title').value
+        this.description = document.querySelector('#description').value
+        this.dueDate = dueDate()
+        this.priority = document.querySelector('#priority').value
+
+        if (this.priority === '1') {
+          this.priority = 'Low'
+        } else if (this.priority === '2') {
+          this.priority = 'Medium'
+        } else if (this.priority === '3') {
+          this.priority = 'High'
+        }
+      }
+
+      const taskSubmit = document.querySelector('#task-submit')
+
+      taskSubmit.onclick = () => {
+        const newTask = new Task()
+
+        const newTaskContainer = document.createElement('div')
+        newTaskContainer.classList.add('task')
+        newProjectTaskContainer.append(newTaskContainer)
+
+        const taskTitle = document.createElement('span')
+        taskTitle.innerHTML = '<b>Title: </b>' + newTask.title
+        newTaskContainer.append(taskTitle)
+        
+        const taskDescription = document.createElement('span')
+        taskDescription.innerHTML = '<b>Description: </b>' + newTask.description
+        newTaskContainer.append(taskDescription)
+
+        const taskDueDate = document.createElement('span')
+
+        if (dueDate().dueDate !== ' , ') {
+          taskDueDate.innerHTML = '<b>Due Date: </b>' + dueDate().dueDate
+        } else {
+          taskDueDate.innerHTML = '<b><i>Due Date Not Set!</b></i>'
+        }
+        newTaskContainer.append(taskDueDate)
+
+        const taskPriority = document.createElement('span')
+        taskPriority.innerHTML = '<b>Priority: </b>' + newTask.priority
+        newTaskContainer.append(taskPriority)
+
+        document.querySelector('#task-title').value = ''
+        document.querySelector('#description').value = ''
+        document.querySelector('#due-date').value = ''
       }
 
       projectForm.style.display = 'none' //Close the form after creating a new project.
