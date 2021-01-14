@@ -3,37 +3,35 @@
   margin: auto;
 }
 
-header {
-  color: white;
-  background-color: black;
-  font-size: 2em;
-  padding: 15px;
+html, body {
+  height: 100%;
 }
 
 .wrapper {
   display: inline-flex;
   margin: auto;
+  height: 100%;
 }
 
 .wrapper > * {
   margin: auto;
-  padding-bottom: 100px;
 }
 
 /* #sidebar styling start */
   .sidebar {
     color: white;
     background-color: blue;
-    height: calc(100vh - 160px);
-    width: auto;
+    height: 100%;
+    width: 20vw;
     overflow: auto;
   }
 
   .project-item {
     display: flex;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 20px;
     border: 1px solid black;
+    text-align: center;
   }
 
   .project-item:hover {
@@ -54,7 +52,7 @@ header {
 
   .add-project {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     border: 2px solid white;
     border-radius: 30px;
     margin: 30px;
@@ -101,15 +99,13 @@ header {
 /* #tasks-wrapper styling start*/
   .tasks-wrapper {
     height: calc(100vh - 160px);
-    width: 65vw;
   }
 
 /* #tasks-wrapper styling end*/
 
 /* #task generator styling start */
   .task-form {
-    display: grid;
-    margin-top: 5vh;
+    display: none;
     z-index: 1;
     overflow: auto;
     font-size: 1.5em;
@@ -150,4 +146,11 @@ header {
 
 .task-container {
   display: flex;
+}
+
+.task {
+  display: flex;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 50px;
 }

@@ -1,4 +1,4 @@
-document.getElementById('task-submit').onclick = () => {
+export const dueDate = () => {
   let date = document.getElementById('due-date').value
   let year = date.charAt(0) + date.charAt(1) + date.charAt(2) + date.charAt(3)
   let month = date.charAt(5) + date.charAt(6)
@@ -31,5 +31,6 @@ document.getElementById('task-submit').onclick = () => {
 
   let day = date.charAt(8) + date.charAt(9)
   let dueDate = month + ' ' + day + ', ' + year
-  console.log(dueDate)
+
+  return { dueDate }
 }

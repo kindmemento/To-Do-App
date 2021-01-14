@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <header>To-Do App</header>
 
   <div class="wrapper">
     <div class="sidebar">
@@ -39,30 +38,30 @@
     </div>
 
     <div class="tasks-wrapper">
-        <!-- #task generator form start-->
-        <div class="task-form">
-          <div>
-            <span>Title</span>
-            <input type="text" id="task-title" placeholder="Enter a title for the task." required>
-          </div>
-          <div>
-            <span>Description</span>
-            <textarea type="text" id="description" placeholder="Describe the task." required></textarea>
-          </div>
-          <div>
-            <span>Due Date: </span>
-            <input type="date" id="due-date" required>
-          </div>
-          <div>
-            <span>What's this task's priority?</span>
-            <input type="range" id="priority" min="1" max="3" value="2">
-            <div id="pValText">Medium</div>
-          </div>
-          <div>
-            <button id="task-submit">Submit</button>
-          </div>
+      <!-- #task generator form start-->
+      <div class="task-form">
+        <div>
+          <span>Title</span>
+          <input type="text" id="task-title" placeholder="Enter a title for the task." required>
         </div>
-        <!-- #task generator form end-->
+        <div>
+          <span>Description</span>
+          <textarea type="text" id="description" placeholder="Describe the task." required></textarea>
+        </div>
+        <div>
+          <span>Due Date: </span>
+          <input type="date" id="due-date">
+        </div>
+        <div>
+          <span>What's this task's priority?</span>
+          <input type="range" id="priority" min="1" max="3" value="2">
+          <div id="pValText">Medium</div>
+        </div>
+        <div>
+          <button id="task-submit">Submit</button>
+        </div>
+      </div>
+      <!-- #task generator form end-->
     </div>
   </div>
 </body>
